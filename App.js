@@ -1,21 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+//import App from './app/index'
+// import TodosApp from './TodosApp/index'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+// export default TodosApp;
+
+import React, { Component } from "react";
+import { Text, View } from "react-native";
+import TodosApp from "./TodosApp/TodosApp";
+import AsyncApp from "./Async/AsyncApp";
+// import HomeScreen from "./AsyncTodos/screens/HomeScreen";
+// import NavApp from "./TutNavigation/NavApp";
+import HomeScreen from "./TutNavigation/HomeScreen";
+
+export class App extends Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+        {/* <HomeScreen /> */}
+        <Text>Hello world</Text>
+      </View>
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
